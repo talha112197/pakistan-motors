@@ -1,0 +1,417 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+:root {
+    --primary-blue: #007bca;
+    --secondary-blue: #1986c9;
+    --light-black: rgba(0, 0, 0, 0.7);
+    --transparent: rgba(0, 0, 0, 0.4);
+    --white-color: #fff;
+    --grey-color: #d1d1d1;
+    --dark-grey: rgb(233, 230, 230);
+    --light-orange: rgb(255, 129, 83);
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+    overflow-x: hidden;
+  }
+
+  .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1000;
+      background-color: #000;
+  }
+
+  .hide-preloader {
+      display: none !important;
+  }
+
+i {
+    cursor: pointer;
+}
+
+i.fab:hover, i.fa-play, i.fa-search {
+     color: var(--primary-blue);
+}
+
+i.fa-car, i.fa-comments, i.fa-users, i.fa-wallet {
+    background-color: var(--grey-color);
+    border-radius: 50%;
+    padding: 0.7rem;
+    color: var(--light-orange);
+    margin-bottom: 1rem;
+    -webkit-animation: whyAnimation 2s infinite linear;
+}
+
+section#showcase {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/headerBcg.jpeg')center/cover no-repeat;
+    background-attachment: fixed;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 50% 100%, 0% 95%);
+    height: calc(100vh - 76px);
+    animation: animateShowcase 5s infinite ease-in;
+}
+
+div.showcase-content {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h3.showcase-h3 {
+    background-color: var(--transparent);
+    padding: 0.6rem;
+    border-left: 1px solid var(--primary-blue);
+    border-width: 0.5rem;
+}
+
+section#why-choose-us {
+    padding: 4rem 0 3rem 0;
+    margin-top: -1.2rem;
+}
+.why-heading {
+    background-color: var(--secondary-blue);
+    color: var(--white-color);
+}
+
+.why-sub-heading {
+         background-color: var(--secondary-blue);
+         
+}
+
+hr.why-hr {
+    width: 30%;
+    margin: 0 auto;
+    border-width: 0.3rem;
+    border-color: var(--primary-blue);
+    border-radius: 1rem;
+}
+
+
+section#our-inventory {
+     background-color: var(--dark-grey);
+     padding: 4rem 0 3rem 0;
+}
+
+section#featured-cars {
+    background-color: var(--dark-grey);
+}
+
+.inventory-heading, .featured-cars-heading {
+    background-color: var(--secondary-blue);
+    color: var(--white-color);
+}
+
+a.car-price-btn {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: var(--secondary-blue);
+}
+
+a.car-price-btn:hover {
+    transform: scale(1.1) !important;
+    
+}
+
+section#buysell {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/questionBcg.jpeg')center/cover no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+section#newsletter {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/headerBcg.jpeg')center/cover no-repeat;
+    background-attachment: fixed;
+}
+
+.buysell-col-6 {
+    background-color: #7575755e;
+    padding: 2rem;
+}
+
+.buysell-second-col-6 {
+    background-color: rgba(233, 168, 47, 0.473);
+    padding: 2rem;
+}
+
+
+div.nav-pills > a {
+    color: #000;
+    font-size: 1.1rem;
+    background-color: rgba(255, 255, 255, 0.74);
+    margin-bottom: 1rem;
+}
+
+div.nav-pills > a:hover {
+   transform: scale(1.06);
+   transition: all 1s linear;
+}
+ 
+div.nav-pills > a.active {
+    background-color: var(--white-color) !important;
+    color: #000 !important;
+}
+
+div.nav-pills > a:not(.active) {
+    opacity: 0.6;
+}
+
+a > i.fa-car-alt {
+    color:  rgba(247, 176, 45, 0.815);
+    font-size: 1.5rem;
+}
+
+div.tab-pane {
+    position: relative;
+    overflow: hidden;  
+}
+
+div.tab-pane:hover img {
+    filter: brightness(30%);
+    transform: scale(1.6);
+    transition: all 2s;
+    
+}
+
+div.pic-controls {
+    display: none;
+}
+
+div.tab-pane:hover  div.pic-controls {
+    display: block;
+    position: absolute;
+    top: 45%;
+    left: calc(50% - 50px);
+    
+}
+
+.custom-col img:hover {
+    filter: grayscale(100%);
+    transition: all 2s;
+}
+
+h2.newsletter-heading {
+    -webkit-animation: headingAnimation 2s infinite ease-in;
+}
+
+input#newsletter {
+    border-color: var(--secondary-blue);
+    color: var(--secondary-blue);
+}
+
+input#newsletter::placeholder, .customer-name {
+    color: var(--primary-blue);
+}
+
+.btn-outline-custom {
+    border-color: var(--secondary-blue);
+    color: var(--primary-blue);
+}
+
+.btn-outline-custom:hover {
+    color: var(--white-color) ;
+    border-color: var(--white-color);
+}
+
+.video-container {
+    position: absolute;
+    width: 100%;
+    height: 110%; 
+    overflow: hidden;
+    
+  }
+
+  .video-container video {
+    /* Make video to at least 100% wide and tall */
+    min-width: 100%; 
+    min-height: 100%; 
+    filter: grayscale(100%) brightness(20%) sepia(50%);
+  
+    /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+    width: auto;
+    height: auto;
+  
+    /* Center the video */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  } 
+
+  .bg-light-white {
+      background-color: rgba(255, 255, 255, 0.267);
+  }
+
+  .col-lg-6 > div.card:hover {
+      transform: scale(1.1);
+      transition: all 2s ease-in;
+      background-color: var(--secondary-blue);
+  }
+
+  .custom-padding {
+      padding: 6rem 0 2rem 0;
+  }
+
+  .test-img {
+      border-radius: 50%;
+      border: 2px solid var(--white-color);
+      border-width: 0.5rem;
+      margin-top: -4rem;
+      
+  }
+
+div.social-content > a > i.fab {
+    color: rgba(247, 176, 45, 0.815);
+}
+
+
+div.social-content > a > i.fab:hover {
+    color: var(--white-color);
+}
+
+.cars-card:hover {
+    transform: scale(1.1);
+    transition: all 2s ease-in-out;
+}
+
+
+i.fa-search:hover, i.fa-dollar-sign:hover {
+    transform: translateY(-15%);
+    cursor: pointer;
+    transition: all 1s linear;
+}
+
+@keyframes whyAnimation {
+    from {
+        -webkit-transform: rotate(0deg);
+        
+}
+to {
+        -webkit-transform: rotate(359deg);
+        
+}
+}
+
+@keyframes headingAnimation {
+    0% {
+        color: #fff;
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+       color: #1986c9;
+       text-shadow: 2px 2px black;
+       transform: scale(1);
+       
+       
+    }
+}
+
+@keyframes animateShowcase {
+    0% {
+        opacity: 100%;;
+        
+    }
+
+    50% {
+        
+        filter: brightness(80%) grayscale(100%)
+    }
+
+    100% {
+        filter: brightness(100%);
+    }
+}
+
+@media (min-width: 250px) and (max-width: 600px) {
+    h1.display-4 {
+        font-size: 2rem;
+    }
+
+    .why-sub-heading {
+        display: inline-block !important;
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        
+    }
+
+    .cars-card:hover {
+        transform: scale(0.9);
+        transition: all 2s ease-in-out;
+    }
+
+    .buy-car-div, .sell-car-div {
+        text-align: center;
+        margin-top: 1rem;
+    }
+    
+    h2.newsletter-heading {
+        transform: scale(0.9);
+        transition: all 2s ease-in;
+    }
+    
+   
+    div.content p > i {
+        font-size: 1.5rem;
+        
+    }
+
+    div.content h2 {
+        font-size: 1rem;
+    }
+    
+    iframe {
+        width: 450px;
+    }
+
+    .our-services-showcase {
+        margin-top: 0 !important;
+    }
+
+    .col-lg-6 > div.card:hover {
+        transform: scale(0.9);
+        transition: all 2s ease-in;
+        
+    }
+    
+
+
+    @keyframes headingAnimation {
+        0% {
+            color: #fff;
+        }
+    
+        50% {
+            transform: scale(1.0);
+        }
+        100% {
+           color: #1986c9;
+           text-shadow: 2px 2px black;
+           transform: scale(0.9);
+           
+           
+        }
+    }
+}
+
+@media (min-width: 601px) and (max-width: 989px) {
+        iframe {
+            width: 600px;
+        }
+}
